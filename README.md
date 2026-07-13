@@ -1,8 +1,8 @@
-# 🤖 Aasan AI
+# 🤖 Qevira AI
 
-Welcome to Aasan AI!
+Welcome to Qevira AI!
 
-Aasan AI is a smart AI assistant designed to help everyone in:
+Qevira AI is a smart AI assistant designed to help everyone in:
 
 - 🇮🇳 Hindi
 - 💬 Hinglish
@@ -17,4 +17,4 @@ Aasan AI is a smart AI assistant designed to help everyone in:
 - Voice Support
 - Mobile Friendly
 
-Made with ❤️ by AasanAIOfficial
+Made with ❤️ by QeviraAIOfficial
