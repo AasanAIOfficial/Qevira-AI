@@ -78,7 +78,10 @@ function login(){
 let email = document.querySelector('input[type="email"]').value;
 let password = document.querySelector('input[type="password"]').value;
 
-if(email=="admin@gmail.com" && password=="123456"){
+let savedEmail = localStorage.getItem("userEmail");
+let savedPassword = localStorage.getItem("userPassword");
+
+if(email==savedEmail && password==savedPassword){
 alert("Login Successful");
 window.location.href="index.html";
 }else{
