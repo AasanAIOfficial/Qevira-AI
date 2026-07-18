@@ -52,6 +52,23 @@ a{
 color:#38bdf8;
 text-decoration:none;
 }
+<body>
+
+<div class="box">
+
+<h2>Login</h2>
+
+<input type="email" placeholder="Email">
+
+<input type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<br><br>
+
+<a href="index.html">← Back to Home</a>
+
+</div>
 <script type="module">
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
@@ -93,7 +110,7 @@ window.login = async function () {
 
   }
 
-}
+    };
 
   </script>
 </body>
