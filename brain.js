@@ -14,10 +14,30 @@ const QeviraBrain = {
 // ======================================
 
 function understandUser(message) {
+   message = message.toLowerCase();
+
+let mood = "Normal";
+let intent = "General";
+
+if (
+    message.includes("hello") ||
+    message.includes("hi") ||
+    message.includes("hey") ||
+    message.includes("ram ram")
+){
+    intent = "Greeting";
+}
+
+if (
+    message.includes("help") ||
+    message.includes("madad")
+){
+    intent = "Need Help";
+}
     return {
-        originalMessage: message,
-        mood: "Unknown",
-        intent: "Unknown",
-        needsClarification: false
-    };
+    originalMessage: message,
+    mood: mood,
+    intent: intent,
+    needsClarification: false
+};
 }
