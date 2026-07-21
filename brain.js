@@ -16,28 +16,70 @@ const QeviraBrain = {
 function understandUser(message) {
    message = message.toLowerCase();
 
-let mood = "Normal";
-let intent = "General";
+let mood = detectEmotion(message);
+let intent = detectIntent(message);
 
-if (
-    message.includes("hello") ||
-    message.includes("hi") ||
-    message.includes("hey") ||
-    message.includes("ram ram")
-){
-    intent = "Greeting";
-}
 
-if (
-    message.includes("help") ||
-    message.includes("madad")
-){
-    intent = "Need Help";
-}
     return {
     originalMessage: message,
     mood: mood,
     intent: intent,
     needsClarification: false
 };
+}
+// ===============================
+// Emotion Engine
+// ===============================
+
+function detectEmotion(message){
+    return "Normal";
+}
+
+// ===============================
+// Intent Engine
+// ===============================
+
+function detectIntent(message){
+
+    if(
+        message.includes("hello") ||
+        message.includes("hi") ||
+        message.includes("hey") ||
+        message.includes("ram ram")
+    ){
+        return "Greeting";
+    }
+
+    if(
+        message.includes("help") ||
+        message.includes("madad")
+    ){
+        return "Need Help";
+    }
+
+    return "General";
+}
+
+// ===============================
+// Safety Engine
+// ===============================
+
+function checkSafety(message){
+    return "Safe";
+}
+
+// ===============================
+// Memory Engine
+// ===============================
+
+function checkMemory(message){
+    return null;
+}
+
+// ===============================
+// Decision Engine
+// ===============================
+
+function makeDecision(){
+    return "Continue";
 }
