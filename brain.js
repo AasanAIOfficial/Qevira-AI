@@ -38,7 +38,10 @@ function detectEmotion(message){
         message.includes("😊") ||
         message.includes("😁")
     ){
-        return "Happy";
+        return {
+    emotion: "Happy",
+    strength: "Low"
+};
     }
 
     if(
@@ -47,7 +50,10 @@ function detectEmotion(message){
         message.includes("dukhi") ||
         message.includes("😢")
     ){
-        return "Sad";
+        return {
+    emotion: "Sad",
+    strength: "Low"
+};
     }
 
     if(
@@ -55,10 +61,16 @@ function detectEmotion(message){
         message.includes("gussa") ||
         message.includes("😡")
     ){
-        return "Angry";
+        return {
+    emotion: "Angry",
+    strength: "Low"
+};
     }
 
-    return "Normal";
+    return {
+    emotion: "Normal",
+    strength: "Low"
+};
 }
 
 // ===============================
