@@ -32,6 +32,32 @@ let intent = detectIntent(message);
 // ===============================
 
 function detectEmotion(message){
+    if(
+        message.includes("happy") ||
+        message.includes("khush") ||
+        message.includes("😊") ||
+        message.includes("😁")
+    ){
+        return "Happy";
+    }
+
+    if(
+        message.includes("sad") ||
+        message.includes("udaas") ||
+        message.includes("dukhi") ||
+        message.includes("😢")
+    ){
+        return "Sad";
+    }
+
+    if(
+        message.includes("angry") ||
+        message.includes("gussa") ||
+        message.includes("😡")
+    ){
+        return "Angry";
+    }
+
     return "Normal";
 }
 
