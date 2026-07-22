@@ -16,13 +16,13 @@ const QeviraBrain = {
 function understandUser(message) {
    message = message.toLowerCase();
 
-let mood = detectEmotion(message);
+let emotion = detectEmotion(message);
 let intent = detectIntent(message);
 
 
     return {
     originalMessage: message,
-    mood: mood,
+    emotion: emotion,
     intent: intent,
     needsClarification: false
 };
