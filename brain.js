@@ -87,12 +87,41 @@ function detectIntent(message){
     ){
         return "Greeting";
     }
+    if(
+        message.includes("thanks") ||
+        message.includes("thank you") ||
+        message.includes("dhanyawad") ||
+        message.includes("shukriya")
+){
+    return "Thanks";
+    }
 
     if(
         message.includes("help") ||
         message.includes("madad")
     ){
         return "Need Help";
+    }
+     if(
+    message.includes("?") ||
+    message.includes("what") ||
+    message.includes("why") ||
+    message.includes("how") ||
+    message.includes("kaise") ||
+    message.includes("kya") ||
+    message.includes("kyu")
+){
+    return "Question";
+     }
+    if(
+    message.includes("suggest") ||
+    message.includes("recommend") ||
+    message.includes("advice") ||
+    message.includes("suggestion") ||
+    message.includes("batao") ||
+    message.includes("recommend karo")
+){
+    return "Advice";
     }
 
     return "General";
