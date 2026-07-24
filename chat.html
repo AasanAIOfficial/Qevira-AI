@@ -30,7 +30,7 @@ button{padding:12px 18px;border:none;border-radius:8px;cursor:pointer}
 </div>
 <script type="module">
 import { ai } from "./firebase.js";
-function sendMessage(){
+async function sendMessage(){
 const input=document.getElementById("message");
 const text=input.value.trim();
 const brainData = understandUser(text);
