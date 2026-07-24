@@ -36,7 +36,12 @@ const text=input.value.trim();
 const brainData = understandUser(text);
 
 console.log(brainData);
-const reply = "Abhi Gemini connect hona baki hai...";
+const response = await ai.models.generateContent({
+  model: "gemini-2.5-flash",
+  contents: text
+});
+
+const reply = response.text;
 if(!text)return;
 const chat=document.getElementById("chat");
 chat.innerHTML+=`<div class="msg user">${text}</div>`;
