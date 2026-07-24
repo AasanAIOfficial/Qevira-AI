@@ -43,7 +43,9 @@ function detectEmotion(message){
     ){
         return {
     emotion: "Happy",
-    strength: "Low"
+    strength: message.includes("extremely happy") ? "High" :
+          message.includes("very happy") ? "Medium" :
+          "Low"
 };
     }
 
