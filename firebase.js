@@ -12,5 +12,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-
+const ai = new GoogleGenAI({ apiKey: firebaseConfig.apiKey });
 export { auth };
