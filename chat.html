@@ -28,7 +28,8 @@ button{padding:12px 18px;border:none;border-radius:8px;cursor:pointer}
 <button class="send" onclick="sendMessage()">Send</button>
 <button class="clear" onclick="clearChat()">Clear</button>
 </div>
-<script>
+<script type="module">
+import { ai } from "./firebase.js";
 function sendMessage(){
 const input=document.getElementById("message");
 const text=input.value.trim();
